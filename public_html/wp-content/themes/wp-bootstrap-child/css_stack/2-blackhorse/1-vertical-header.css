@@ -1,0 +1,96 @@
+/* Расположение Header по вертикали с правой стороны */ 
+
+@media(min-width: 992px){	
+	#site-navigation, #primary-menu, #page.site {display:flex;}
+	#site-navigation, #primary-menu	{flex-direction: column;}
+	
+	
+	#primary-menu-wrap.navbar-collapse{
+		align-items: unset; 
+		margin-top: 15px;
+		}
+	
+	#site-navigation{height: 100vh; width: 300px;  overflow-y: auto;}	
+	body.admin-bar #site-navigation{ height: calc(100vh - 32px);}
+	
+	
+	#masthead.site-header{border: unset; position: fixed;}		
+	#content.site-content{position: absolute; right: 0; width: calc(100% - 300px);}		
+	 
+	
+	body.page .right-content-box{margin-right: unset;}
+	
+	.right-content-box article{margin-top: unset;}
+	
+	
+	body.single #content.site-content{width: calc(100% - 300px);}	
+	body.single .post-navigation .nav-previous{margin: 0px 30px;}
+	
+	#primary-menu-wrap{flex-grow: unset;}
+	
+	#colophon{	width: 100%; position: fixed; bottom: 0; display: none;	}
+	
+	
+
+}
+
+
+/* Адаптивность */
+
+@media(max-width: 991px){	
+	
+	.main-navigation .copyright{display: none;}
+	.main-navigation #header-phone{margin-bottom: 0px;}
+	.main-navigation #header-phone p {margin-bottom: 0.5rem;}
+
+	#header-phone span {
+		letter-spacing: .5px;
+		font-size: 18px;
+		padding: 2px !important;
+		display: block;
+	}
+
+	#header-phone a.navigation-tel-whatsapp {
+		position: relative;
+		top: -2px;
+	}
+
+	.custom-logo-link{display: none;}
+	.btn-container{
+		max-width: 40%;
+		text-align: right;
+		padding: 0px !important;
+		position: relative;
+		top: 6px;
+	}
+	
+	#header-phone, #header-phone a {width: 60% !important;}
+	#colophon{display: none;}
+
+} /* end media */
+
+/* Адаптивность end */
+
+
+
+/* Custom scroll */
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background: rgb(202 189 155);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: #1c1f2a;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    border-radius: .5rem;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+    background: #1c1d22;
+}
+
+ 	
+/* end */

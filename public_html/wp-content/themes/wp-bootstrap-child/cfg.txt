@@ -1,0 +1,17 @@
+      
+	  
+	modules_page: home
+	
+	min_mode: 		true
+	no_cache:		true
+	
+	home/css: option_style_one, option_style_two
+	home/js: option_script_one
+
+	page/css: page_style
+	page/js: page_script
+	
+	post/css: post_style
+	post/js: post_script
+	
+	

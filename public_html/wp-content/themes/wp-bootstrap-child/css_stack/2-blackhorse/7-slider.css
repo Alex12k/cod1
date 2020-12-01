@@ -1,0 +1,181 @@
+/* Нумерация слайдов */
+.numberSlider
+{position: absolute; color: #fff; bottom: 15px; right: calc(50% - 120px);}
+
+
+.numberSlider {font-size: 40px;} 
+.numberSlider .sliderTo{margin-right: 2px;}	
+.numberSlider .sliderLength{margin-left: 2px; font-size: 20px;}
+/* End Нумерация слайдов */
+
+
+
+/* стрелки на слайдере */
+.carousel-inner{position: relative;}
+
+.knyazhe-ozero .carousel-control-prev,
+.literator .carousel-control-prev
+{left: calc(50% - 35px);}
+
+.knyazhe-ozero .carousel-control-next,
+.literator .carousel-control-next
+{right: calc(50% - 35px);}
+
+.knyazhe-ozero .carousel-control-prev, 
+.knyazhe-ozero .carousel-control-next, 
+.literator .carousel-control-prev, 
+.literator .carousel-control-next
+{
+    top: unset; 
+    bottom: 10px;
+    width: unset;
+    background: #cabd9b;
+	padding: 5px;
+}
+
+/* end */
+
+
+
+/* Галерея */
+
+
+.knyazhe-ozero .card-body .entry-header,
+.literator .card-body .entry-header
+{display: none;}
+
+
+.knyazhe-ozero .hentry.card .card-body,
+.literator .hentry.card .card-body
+{padding: unset;}
+
+
+.knyazhe-ozero .entry-content,
+.literator .entry-content
+{margin: unset;}
+
+
+.knyazhe-ozero .hentry,
+.literator .hentry
+{margin: unset;}
+
+
+.knyazhe-ozero .carousel img,
+.literator .carousel img
+{width: unset !important; margin: 0 auto;}
+
+
+.knyazhe-ozero .carousel,
+.literator .carousel
+{width: 100%; height: 100vh; margin-bottom: unset;}
+
+
+.knyazhe-ozero.admin-bar .carousel,
+.literator.admin-bar .carousel
+{height: calc(100vh - 32px);}
+
+.knyazhe-ozero .carousel img,
+.literator .carousel img
+{max-height: unset; height: 100%;}
+
+.knyazhe-ozero .carousel-inner,
+.literator .carousel-inner
+{height: 100%;}
+
+.knyazhe-ozero .carousel-item,
+.literator .carousel-item
+{height: 100%;}
+
+
+.knyazhe-ozero .entry-footer.card-footer,
+.literator .entry-footer.card-footer
+{position: absolute; bottom: 0;}
+
+/* Для страницы галерея */
+
+
+
+
+
+
+
+/* Стрелки */
+/* стрелки на слайдере */
+
+
+.page-id-439 .carousel-control-prev,
+.page-id-439 .carousel-control-prev
+{left: calc(50% - 35px);}
+
+.page-id-439 .carousel-control-next,
+.page-id-439 .carousel-control-next
+{right: calc(50% - 35px);}
+
+.page-id-439 .carousel-control-prev, 
+.page-id-439.carousel-control-next, 
+.page-id-439 .carousel-control-prev, 
+.page-id-439 .carousel-control-next
+{
+    top: unset; 
+    bottom: 20px;
+    width: unset;
+    background: #cabd9b;
+	padding: 5px;
+}
+
+/* end */
+
+
+
+
+
+/* Слайдеры */
+:root{
+	--carusel-height: 80vh;
+}
+
+.page-id-439 .card-body .entry-header{display: none;}
+
+/*
+.page-id-439 .hentry.card .card-body{padding: unset;}
+.page-id-439 .entry-content{margin: unset;}
+.page-id-439 .hentry{margin: unset;}
+*/
+
+.page-id-439 .carousel img{ 
+	width: unset !important; 
+	margin: 0 auto;
+	border-radius: 7px;
+	}
+
+
+
+.page-id-439 .carousel{width: 100%; height: var(--carusel-height); margin-bottom: unset;}
+.page-id-439.admin-bar .carousel{height: calc(var(--carusel-height) - 32px); margin-top: 15px;}
+.page-id-439 .carousel img{max-height: unset; height: 100%;}
+.page-id-439 .carousel-inner{height: 100%;}
+.page-id-439 .carousel-item{height: 100%;}
+.page-id-439 .entry-footer.card-footer{position: absolute; bottom: 0;}
+
+.page-id-439 .carousel{
+	background: #2b3040;
+    border: 1px solid var(--gold);
+	padding: 10px;
+	border-radius: 7px;
+	}
+
+
+.page-id-439 #content h2,
+.page-id-439 #content p
+{
+	margin-bottom: 0.3rem;
+	
+}
+
+/* Картинка в шапке */
+.page-id-439 .card-body .post-thumbnail img {
+    width: 100%;
+    max-height: 256px;
+    object-fit: cover;
+	
+}

@@ -1,0 +1,33 @@
+/* Identica */ 
+:root{ 
+	--deep-blue:#1c1f2a;
+	--white: #f1efed;
+	--gold: #cabd9b;
+	
+	--hover-white: hsla(30,12%,94%,.6)!important;
+	--simple-text: 18px;
+	--big-text: 25px;
+	--line-height-simple-text: 27px;
+}
+
+
+p.has-medium-font-size{font-size: 25px; line-height: 35px;}
+
+h1{
+	font-size: 41px !important;
+    line-height: 42px !important;
+    letter-spacing: 1.65px;
+	font-weight: 300 !important;
+	}
+	
+h2{
+	font-size: 37px !important;
+	font-weight: 300 !important;
+	line-height: 42px !important;
+}
+
+h5{
+	font-weight: 300 !important;	
+	line-height: 26px !important;
+}
+

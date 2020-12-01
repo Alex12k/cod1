@@ -1,0 +1,59 @@
+/* Модальное окно */
+
+
+
+.modal{background-image: url('http://guitarzilla.ru/wp-content/uploads/2020/10/01.jpg');	}
+@media(min-width: 992px){.modal{margin-left: 300px;}}
+.modal-dialog{max-width: 1140px;}
+
+.modal-content{margin: 0px 30px;}
+
+/* Крестик close */
+.modal-header .close {
+    color: var(--white);
+    text-shadow: 0 1px 0 #585858;
+    opacity: 1;
+}
+
+.modal-header .close:hover{
+	color: var(--white) !important;
+    text-shadow: 0 1px 0 #585858;
+    opacity: .6 !important;	
+}
+
+/* END Крестик close */
+
+
+p label{color: hsla(30,12%,94%,.4);}
+
+.modal-title{color: white;}
+
+.modal-content,
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap input:focus,
+.wpcf7-form-control-wrap textarea
+{
+	background: rgba(28,31,42,.6);
+	border-radius: unset;
+	color: var(--white);
+	
+
+	}
+	
+	
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea{
+	border-color: hsla(30,12%,94%,.4);
+	}
+
+
+.wpcf7-form-control-wrap input:focus,
+.wpcf7-form-control-wrap textarea:focus{
+	border-color: white;
+	box-shadow: unset;
+}
+
+
+
+@media(max-width: 767px){.wpcf7-form-control-wrap textarea{margin-top: 28px;}}
+

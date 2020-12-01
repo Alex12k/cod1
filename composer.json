@@ -1,0 +1,20 @@
+{
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+	"wpackagist-plugin/password-protected": "*",
+    "wpackagist-plugin/rus-to-lat-advanced": "*",
+    "wpackagist-plugin/contact-form-7": "*"
+  },
+  "extra": {
+    "installer-paths": {
+      "public_html/wp-content/plugins/{$name}/": ["vendor:wpackagist-plugin"],
+      "public_html/wp-content/themes/{$name}/": ["vendor:wpackagist-theme"]
+    }
+  }
+}

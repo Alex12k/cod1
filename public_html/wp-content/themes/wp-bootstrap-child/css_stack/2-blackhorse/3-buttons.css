@@ -1,0 +1,42 @@
+/* Modal btn */
+.btn-container{width: 100%; padding: 8px;}
+
+
+.wpcf7 input[type="submit"],
+.btn-modal{
+	color: #1c1f2a;
+    text-decoration: none;
+    background-color: #cabd9b !important;
+    border-color: #cabd9b !important;
+    box-shadow: 0 0 0.5px 0 #cabd9b, inset 0 0 0.5px 0 #cabd9b;
+	border-radius: unset;
+
+}
+
+
+.btn-modal:hover{
+	color: #f1efed !important;
+    text-decoration: none;
+    background-color: #b2a78c !important;
+    border-color: #b2a78c;
+    box-shadow: 0 0 0.5px 0 #b2a78c, inset 0 0 0.5px 0 #b2a78c;
+
+}
+
+
+
+.wpcf7 input[type="submit"]:hover{
+	color: #f1efed !important;
+    text-decoration: none;
+    background-color: #b2a78c !important;
+    border-color: #b2a78c;
+    box-shadow: 0 0 0.5px 0 #b2a78c, inset 0 0 0.5px 0 #b2a78c;
+	
+}
+
+
+.btn:focus, .btn.focus {box-shadow: unset;}
+input[type="submit"]:focus{outline: unset;}
+
+
+
