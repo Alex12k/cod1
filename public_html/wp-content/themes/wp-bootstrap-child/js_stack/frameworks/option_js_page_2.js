@@ -1,1 +1,0 @@
-$('.options_js_block').html('Опциональная JS_2');
