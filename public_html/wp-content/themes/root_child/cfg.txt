@@ -1,27 +1,11 @@
 
 
 	
-	modules_page: custom_page_1, custom_page_2
+	modules_page: home
 	
 	min_mode: 		false
 	no_cache:		true
 	root_style:		true
-
-     
-	custom_page_1/css: option_style_one     
-	custom_page_1/js:  option_script_one  
-	
-	custom_page_2/css: option_style_two		
-	custom_page_2/js: option_script_two
-	
-	
-	page/css: option_style_one
-	page/js:  option_script_one
-	
-	
-	post/css: option_style_one
-	post/js:  option_script_one
-	
 	
 
 	
