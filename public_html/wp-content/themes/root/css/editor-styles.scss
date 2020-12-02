@@ -1,0 +1,109 @@
+body#tinymce.wp-editor {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  blockquote {
+    position: relative;
+    font-size: 120%;
+    margin: 20px 0;
+    padding: 0 30px;
+
+    &:before {
+      content: '\201C';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      font-size: 42px;
+      color: #425d9d;
+    }
+
+    &.warning {
+      background: #fff4d4 url(../images/blockquote-warning.png) 20px center no-repeat;
+      font-size: 100%;
+      padding: 20px 30px 10px 80px;
+      border-radius: 6px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &.info {
+      background: #e3f1f4 url(../images/blockquote-info.png) 20px center no-repeat;
+      font-size: 100%;
+      padding: 20px 30px 10px 80px;
+      border-radius: 6px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &.danger {
+      background: #ffe3db url(../images/blockquote-danger.png) 20px center no-repeat;
+      font-size: 100%;
+      padding: 20px 30px 10px 80px;
+      border-radius: 6px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    td, th {
+      border: 1px solid #ccc;
+      padding: 7px 12px;
+    }
+
+    th {
+      text-align: left;
+      background: #eee;
+    }
+  }
+
+  .wpshop-row {
+    position: relative;
+    border: 1px dotted #ccc;
+    padding: 15px 10px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    &:before {
+      content: 'columns';
+      position: absolute;
+      top: -7px;
+      left: 10px;
+      font-size: 10px;
+      background: #fff;
+      padding: 0 3px;
+      border: 1px dotted #ccc;
+    }
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+
+  .root-col-6 {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+    border: 1px dotted #aaa;
+  }
+}

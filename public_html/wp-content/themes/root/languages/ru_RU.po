@@ -1,0 +1,601 @@
+# Copyright (C) 2016 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2017-07-10 09:02+0300\n"
+"PO-Revision-Date: 2017-07-12 07:47+0300\n"
+"Last-Translator: Sergey <support@wpshop.biz>\n"
+"Language-Team: https://wpshop.ru/\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx;esc_html__;esc_html_e;esc_html_x;"
+"esc_attr__;esc_attr_e;esc_attr_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ _s
+#: 404.php:27
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "К сожалению, запрашиваемая страница не существует."
+
+# @ _s
+#: 404.php:30
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Ничего не найдено по данному запросу. Попробуйте воспользоваться поиском "
+"чтобы найти то, что Вам нужно!"
+
+#: 404.php:31 template-parts/content-none.php:40
+#: template-parts/content-none.php:55
+msgid "What can be done?"
+msgstr "Что можно сделать?"
+
+#: 404.php:33
+msgid "Try to use search"
+msgstr "Воспользуйтесь поиском"
+
+#: 404.php:34 template-parts/content-none.php:43
+#: template-parts/content-none.php:58
+#, php-format
+msgid "Go to <a href=\"%1$s\">Homepage</a>."
+msgstr "Перейдите на <a href=\"%1$s\">главную</a> страницу."
+
+#: comments.php:41 template-parts/content-single.php:106
+#: template-parts/posts/content-card-one.php:65
+#: template-parts/posts/content-card.php:53
+#: template-parts/posts/content-meta.php:47
+msgid "Comments"
+msgstr "Комментариев"
+
+#: comments.php:45 comments.php:67
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: comments.php:48 comments.php:70
+msgid "Older Comments"
+msgstr "Старые комментарии"
+
+#: comments.php:49 comments.php:71
+msgid "Newer Comments"
+msgstr "Новые комментарии"
+
+#: comments.php:84
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: functions.php:99
+msgid "Top menu"
+msgstr "Верхнее меню"
+
+#: functions.php:100
+msgid "Header menu"
+msgstr "Меню под шапкой"
+
+#: functions.php:101
+msgid "Footer menu"
+msgstr "Меню в подвале"
+
+#: functions.php:156
+msgid "Sidebar"
+msgstr "Сайдбар"
+
+#: functions.php:158
+msgid "Add widgets here."
+msgstr "Добавьте виджеты сюда."
+
+#: header.php:36
+msgid "Skip to content"
+msgstr "Перейти к контенту"
+
+#: inc/comments.php:117
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации."
+
+#: inc/customizer/customizer.php:27
+msgid "Wood"
+msgstr ""
+
+#: inc/customizer/customizer.php:32
+msgid "Wood 2"
+msgstr ""
+
+#: inc/customizer/customizer.php:37
+msgid "Blue waves"
+msgstr ""
+
+#: inc/customizer/customizer.php:42
+msgid "Plaid"
+msgstr ""
+
+#: inc/customizer/customizer.php:47
+msgid "Wallpaper"
+msgstr ""
+
+#: inc/customizer/customizer.php:52
+msgid "Honey"
+msgstr ""
+
+#: inc/customizer/customizer.php:57
+msgid "Wall"
+msgstr ""
+
+#: inc/customizer/customizer.php:62
+msgid "Sea"
+msgstr ""
+
+#: inc/customizer/customizer.php:67
+msgid "Dots"
+msgstr ""
+
+#: inc/customizer/customizer.php:220
+msgid "Паттерн"
+msgstr ""
+
+#: inc/customizer/customizer.php:235
+msgid "Фон для шапки"
+msgstr ""
+
+#: inc/customizer/customizer.php:251
+msgid "Повторение фона"
+msgstr ""
+
+#: inc/customizer/customizer.php:252
+msgid ""
+"Если Вам необходимо повторять фоновое изображение шапки, Вы можете задать "
+"это в поле ниже"
+msgstr ""
+
+#: inc/customizer/customizer.php:254
+msgid "Не повторять"
+msgstr ""
+
+#: inc/customizer/customizer.php:255
+msgid "Повторять по горизонали и вертикали"
+msgstr ""
+
+#: inc/customizer/customizer.php:256
+msgid "Повторять по горизонтали"
+msgstr ""
+
+#: inc/customizer/customizer.php:257
+msgid "Повторять по вертикали"
+msgstr ""
+
+#: inc/customizer/customizer.php:271
+msgid "Расположение фона"
+msgstr ""
+
+#: inc/customizer/customizer.php:273
+msgid "Сверху слева"
+msgstr ""
+
+#: inc/customizer/customizer.php:274
+msgid "Сверху по центру"
+msgstr ""
+
+#: inc/customizer/customizer.php:275
+msgid "Сверху справа"
+msgstr ""
+
+#: inc/customizer/customizer.php:276
+msgid "По центру слева"
+msgstr ""
+
+#: inc/customizer/customizer.php:277
+msgid "По центру"
+msgstr ""
+
+#: inc/customizer/customizer.php:278
+msgid "По центру справа"
+msgstr ""
+
+#: inc/customizer/customizer.php:279
+msgid "Снизу слева"
+msgstr ""
+
+#: inc/customizer/customizer.php:280
+msgid "Снизу по центру"
+msgstr ""
+
+#: inc/customizer/customizer.php:281
+msgid "Снизу справа"
+msgstr ""
+
+#: inc/customizer/customizer.php:453
+msgid "Основной шрифт"
+msgstr ""
+
+#: inc/customizer/customizer.php:467
+msgid "Основной размер шрифта, px"
+msgstr ""
+
+#: inc/customizer/customizer.php:486
+msgid "Основной межстрочный интервал"
+msgstr ""
+
+#: inc/customizer/customizer.php:505
+msgid "Шрифт заголовков"
+msgstr ""
+
+#: inc/customizer/customizer.php:521
+msgid "Структура"
+msgstr ""
+
+#: inc/customizer/customizer.php:532
+msgid "Шапка"
+msgstr ""
+
+#: inc/customizer/customizer.php:556
+msgid "Header width"
+msgstr "Ширина шапки"
+
+#: inc/customizer/customizer.php:558 inc/customizer/customizer.php:582
+#: inc/customizer/customizer.php:676 inc/customizer/customizer.php:698
+#: inc/customizer/customizer.php:734 inc/customizer/customizer.php:756
+#: inc/customizer/customizer.php:793 inc/customizer/customizer.php:813
+msgid "Full width"
+msgstr "На всю ширину"
+
+#: inc/customizer/customizer.php:559 inc/customizer/customizer.php:583
+#: inc/customizer/customizer.php:677 inc/customizer/customizer.php:699
+#: inc/customizer/customizer.php:735 inc/customizer/customizer.php:757
+#: inc/customizer/customizer.php:794 inc/customizer/customizer.php:814
+msgid "Fixed width"
+msgstr "Фиксированная ширина"
+
+#: inc/customizer/customizer.php:580
+msgid "Header inner width"
+msgstr "Ширина внутри шапки"
+
+#: inc/customizer/customizer.php:605
+msgid "Header padding top"
+msgstr "Отступ сверху у шапки"
+
+#: inc/customizer/customizer.php:633
+msgid "Header padding bottom"
+msgstr "Отступ снизу у шапки"
+
+#: inc/customizer/customizer.php:655
+msgid "Основное меню"
+msgstr ""
+
+#: inc/customizer/customizer.php:674
+msgid "Main navigation width"
+msgstr "Ширина основного меню"
+
+#: inc/customizer/customizer.php:696
+msgid "Main navigation inner width"
+msgstr "Ширина внутри основного меню"
+
+#: inc/customizer/customizer.php:713
+msgid "Нижнее меню"
+msgstr ""
+
+#: inc/customizer/customizer.php:732
+msgid "Footer navigation width"
+msgstr "Ширина навигации в подвале"
+
+#: inc/customizer/customizer.php:754
+msgid "Footer navigation inner width"
+msgstr "Ширина внутри навигации в подвале"
+
+#: inc/customizer/customizer.php:771
+msgid "Подвал"
+msgstr ""
+
+#: inc/customizer/customizer.php:791
+msgid "Footer width"
+msgstr "Ширина подвала"
+
+#: inc/customizer/customizer.php:811
+msgid "Footer inner width"
+msgstr "Ширина внутри подвала"
+
+#: inc/customizer/customizer.php:859
+msgid "Логотип"
+msgstr ""
+
+#: inc/customizer/customizer.php:872
+msgid "Скрыть заголовок и описание в шапке?"
+msgstr ""
+
+#: inc/customizer/customizer.php:905
+msgid "Копирайт"
+msgstr ""
+
+#: inc/customizer/customizer.php:906
+msgid "Используйте %year%, чтобы добавить текущий год"
+msgstr ""
+
+#: inc/customizer/customizer.php:917
+msgid "Текст под копирайтом"
+msgstr ""
+
+#: inc/customizer/customizer.php:930
+msgid "Счетчики"
+msgstr ""
+
+#: inc/customizer/customizer.php:957
+msgid "Карточки постов на главной"
+msgstr ""
+
+#: inc/customizer/customizer.php:975 inc/customizer/customizer.php:1050
+#: inc/customizer/customizer.php:1286 inc/customizer/customizer.php:1369
+msgid "Сайдбар"
+msgstr ""
+
+#: inc/customizer/customizer.php:994
+msgid "Заголовок H1"
+msgstr ""
+
+#: inc/customizer/customizer.php:995
+msgid "Если поле не задано - заголовком h1 становится логотип (название сайта)"
+msgstr ""
+
+#: inc/customizer/customizer.php:1007
+msgid "Текст"
+msgstr ""
+
+#: inc/customizer/customizer.php:1009
+msgid "Текст под заголовком H1, отображается только на главной"
+msgstr ""
+
+#: inc/customizer/customizer.php:1021
+msgid "Расположение заголовка и текста"
+msgstr ""
+
+#: inc/customizer/customizer.php:1068
+msgid "Выводить миниатюру?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1086 inc/customizer/customizer.php:1494
+msgid "Выводить автора?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1103 inc/customizer/customizer.php:1512
+msgid "Выводить дату?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1120 inc/customizer/customizer.php:1530
+msgid "Выводить рубрику?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1137
+msgid "Выводить наверху соц кнопки?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1154 inc/customizer/customizer.php:1546
+msgid "Выводить отрывок"
+msgstr ""
+
+#: inc/customizer/customizer.php:1171 inc/customizer/customizer.php:1562
+msgid "Выводить кол-во комментариев"
+msgstr ""
+
+#: inc/customizer/customizer.php:1188 inc/customizer/customizer.php:1578
+msgid "Выводить кол-во просмотров"
+msgstr ""
+
+#: inc/customizer/customizer.php:1205
+msgid "Выводить теги, если заданы?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1222
+msgid "Выводить соц кнопки под постом?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1239 inc/customizer/customizer.php:1303
+msgid "Кол-во похожих статей"
+msgstr ""
+
+#: inc/customizer/customizer.php:1241 inc/customizer/customizer.php:1306
+msgid "0 - чтобы отключить, максимум 50"
+msgstr ""
+
+#: inc/customizer/customizer.php:1253 inc/customizer/customizer.php:1318
+msgid "Комментарии"
+msgstr ""
+
+#: inc/customizer/customizer.php:1351
+msgid "Карточки постов в архивах"
+msgstr ""
+
+#: inc/customizer/customizer.php:1386
+msgid "Описание рубрики"
+msgstr ""
+
+#: inc/customizer/customizer.php:1415
+msgid "Текст перед кнопкой Отправить"
+msgstr ""
+
+#: inc/customizer/customizer.php:1430
+msgid "Выводить дату в комментариях"
+msgstr ""
+
+#: inc/customizer/customizer.php:1447
+msgid "Выводить смайлы в комментариях"
+msgstr ""
+
+#: inc/customizer/customizer.php:1477
+msgid "Тег заголовка"
+msgstr ""
+
+#: inc/customizer/customizer.php:1609
+msgid "Выводить стрелку вверх?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1658
+msgid "Ширина стрелки вверх, px"
+msgstr ""
+
+#: inc/customizer/customizer.php:1679
+msgid "Высота стрелки вверх, px"
+msgstr ""
+
+#: inc/customizer/customizer.php:1699
+msgid "Выбор иконки стрелки вверх"
+msgstr ""
+
+#: inc/customizer/customizer.php:1701
+msgid "Двойная кавычка вверх"
+msgstr ""
+
+#: inc/customizer/customizer.php:1702
+msgid "Кавычка вверх"
+msgstr ""
+
+#: inc/customizer/customizer.php:1703
+msgid "Круг"
+msgstr ""
+
+#: inc/customizer/customizer.php:1704
+msgid "Стрелка в круге"
+msgstr ""
+
+#: inc/customizer/customizer.php:1705
+msgid "Стрелка вверх"
+msgstr ""
+
+#: inc/customizer/customizer.php:1706
+msgid "Стрелка в квадрате"
+msgstr ""
+
+#: inc/customizer/customizer.php:1707
+msgid "Квадрат"
+msgstr ""
+
+#: inc/customizer/customizer.php:1708 inc/customizer/customizer.php:1710
+msgid "Стрелка вверх 2"
+msgstr ""
+
+#: inc/customizer/customizer.php:1709
+msgid "Стрелка в круге 2"
+msgstr ""
+
+#: inc/customizer/customizer.php:1723
+msgid "Выводить стрелку вверх на мобильном?"
+msgstr ""
+
+#: inc/customizer/customizer.php:1755
+msgid "В &lt;head&gt;"
+msgstr ""
+
+#: inc/customizer/customizer.php:1769
+msgid "Перед &lt;body&gt;"
+msgstr ""
+
+#: inc/customizer/customizer.php:1783
+msgid "Сразу после контента"
+msgstr ""
+
+#: inc/customizer/customizer.php:1886
+msgid "No"
+msgstr ""
+
+#: inc/template-tags.php:40 template-parts/posts/content-meta.php:37
+msgid "Category"
+msgstr "Рубрика"
+
+#: inc/template-tags.php:43 template-parts/posts/content-meta.php:40
+msgid "Author"
+msgstr "Автор"
+
+#: inc/thumbnails.php:24
+msgid "Большая миниатюра"
+msgstr ""
+
+#: inc/thumbnails.php:25
+msgid ""
+"На странице записи будет отображаться миниатюра на всю ширину сайта. "
+"Рекомендуемый размер 1170x500"
+msgstr ""
+
+#: inc/thumbnails.php:26
+msgid "Рекомендуемый размер 770x330"
+msgstr ""
+
+#: inc/wpshopbiz.php:248
+msgid "CSS Classes"
+msgstr "CSS классы"
+
+#: search.php:30
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Поиск по запросу: %s"
+
+#: searchform.php:23
+msgid "Search"
+msgstr "Поиск"
+
+#: template-parts/content-none.php:27
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: template-parts/content-none.php:34
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы добавить свою первую запись? <a href=\"%1$s\">Перейти к добавлению</"
+"a>."
+
+# @ _s
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, но ничего не соответствует условиям поиска. Пожалуйста, попробуйте "
+"еще раз с другими ключевыми словами."
+
+#: template-parts/content-none.php:42 template-parts/content-none.php:57
+msgid "Try to change search phrase"
+msgstr "Попробуйте изменить фразу для поиска"
+
+#: template-parts/content-none.php:53
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"К сожалению, нужная страница не найдена. Попробуйте воспользоваться поиском."
+
+#: template-parts/content-page.php:41 template-parts/content-single.php:91
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: template-parts/content-single.php:110
+#: template-parts/posts/content-card-one.php:69
+#: template-parts/posts/content-card.php:57
+#: template-parts/posts/content-meta.php:51
+msgid "Views"
+msgstr "Просмотров"
+
+#: template-parts/content-single.php:132 template-parts/content-single.php:134
+msgid "Source"
+msgstr "Источник"
+
+#: template-parts/content-single.php:146
+msgid "Like this post? Please share to your friends:"
+msgstr "Понравилась статья? Поделиться с друзьями:"
+
+#: template-parts/posts/content-skin-1.php:46
+#: template-parts/posts/content.php:48
+msgid "Read more"
+msgstr "Читать полностью"
+
+#: template-parts/related-posts-page.php:40 template-parts/related-posts.php:41
+msgid "Related articles"
+msgstr "Вам также может быть интересно"
+
+# @ _s
+#~ msgid "Most Used Categories"
+#~ msgstr "Популярные рубрики"
