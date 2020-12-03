@@ -44,12 +44,14 @@ function observer($message = ''){
 
 
 	/*-----создание системных папок и фаилов------*/	
-	$system_elements = $last_state_structure['generated']; //print_arr($system_elements);
+	$system_elements = $last_state_structure['generated']; //print_arr($system_elements, 'Элементы которые требуются для работы omw');
 	creat_system_elements($system_elements);
 	/*-----end-----*/
 
 
 	/*------- Воссоздание структуры страниц проекта--------*/
+	//print_arr($modules_page , 'модульные страницы');
+
 	$folders_to_create = check_project_page($modules_page); 
 	//print_arr($folders_to_create, 'список папок для создания');		
 	if($folders_to_create){	
@@ -129,7 +131,8 @@ function observer($message = ''){
 
 
 	//$change_css_content = true;
-	//$change_js_content = true;
+	//$change_js_content 	= true;
+	//$change_cfg = true;
 	
 	$observers_raport = array(		
 		'change_structure' 		=> $change_structure,		

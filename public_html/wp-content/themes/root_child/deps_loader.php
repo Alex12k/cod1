@@ -8,17 +8,19 @@
 	/* Потом это потребует переработки */
 	if(is_home()){$template_name 	= 'page';}
 	
-
+	
 
 //Чтение данных и настроект 	
 	$cfg 	= 	read_settings('/cfg.txt');
 	$data 	= unserialize(file_get_contents(get_stylesheet_directory().'/load.txt'));
 	
+	//print_arr($data, 'Данные из фаила load.txt');
+	
 	$min_mode		=	$cfg['min_mode'];
 	$noCache		=	$cfg['no_cache'];
-	$root_style		=	$cfg['root_style'];	
+	//$root_style		=	$cfg['root_style'];	
 
-	
+
 
 	if($noCache){$ver = rand();}
 	if(get_template_name()){$isCustomPage =  true;}
@@ -39,7 +41,11 @@
 					);							
 			}
 		
-	//print_arr($dataPage, 'dataPage');
+
+
+	
+	
+	//print_arr($dataPage);
 	
 	foreach(['css','js'] as $type){	
 			$stream[$type]  = array_merge($dataPage[$type]['global'], $dataPage[$type]['options'], $dataPage[$type]['page']);			
@@ -64,6 +70,7 @@ if($min_mode){/* if min mode */
 }else{
 	//te('stack_mode_active');	
 	foreach($stream['css'] as $handle => $dir_file){							
+		//te($handle);	
 		wp_enqueue_style($handle, $dir_file, $deps, $ver, $in_footer);}
 	
 	foreach($stream['js'] as $handle => $dir_file){							

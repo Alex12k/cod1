@@ -3,9 +3,15 @@
 	
 	modules_page: home
 	
-	min_mode: 		false
+	min_mode: 	    true
 	no_cache:		true 
 	root_style:		true
+	
+
+
+	
+
+	
 	
 
 	

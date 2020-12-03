@@ -46,7 +46,7 @@ function manager($raport='', $current_state_structure=''){
 	
 		$type = 'css';	
 		refreash_deps($type, $current_state_structure);
-	
+		//print_arr($current_state_structure);
 	} // END WORKER COMMAND CHANGE
 	
 	

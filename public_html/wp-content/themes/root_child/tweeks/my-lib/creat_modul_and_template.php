@@ -1,35 +1,34 @@
 <?php
 	
-	function creat_modul_structure($modul_name, $modul_folder){
+	function creat_modul_structure($template_path){
 				
-				
-		te("Структура модуля $modul_name создана");
-			
+		te($template_path, 'template_path');
+		$modul_folder = LastPartUrl($template_path); 	te($modul_folder, 'modul_folder');
+		$handle = remove_gravity_index($modul_folder);	te($handle, 'handle');
+		
+		
+		te("Структура модуля $handle создана");
 
 			
-		/* ОПРЕДЕЛЕНИЕ ПУТЕЙ ПАПОК И ФАИЛОВ */
-		
-		/* Убираем порядковый номер модуля */
-		$handle = remove_gravity_index($modul_name);
-		//te($handle);
-		
-					
+		/* ОПРЕДЕЛЕНИЕ ПУТЕЙ ПАПОК И ФАИЛОВ */					
 		/* путь до папки css модуля и основного css фаила */
-		$css_folder		=	$modul_folder.'/css';
-		$css_file 		=	$css_folder.'/'.$handle.'-style.css';
+		$css_folder		=	$template_path.'/css'; 					print_arr($css_folder, 'путь до папки css');
+		$css_file 		=	$css_folder.'/'.$handle.'-style.css'; 	print_arr($css_file, 'путь до папки css');
+		
+	
 		
 		/* путь до папки js модуля и основного js фаила */		
-		$js_folder		= 	$modul_folder.'/js';
+		$js_folder		= 	$template_path.'/js';  
 		$js_file 		=	$js_folder.'/'.$handle.'-script.js';
 			
 		/* Путь до папки с картинками для модуля */	
-		$img_folder		=	$modul_folder.'/img';
+		$img_folder		=	$template_path.'/img';
 			
 		/* END */	
 		
 		/* СОЗДАНИЕ ПАПОК И ФАИЛОВ И ЗАПИСЬ КОНТЕНТА */
 		
-		mkdir($modul_folder);	//Создание папки модуля		
+//		mkdir($template_path);	//Создание папки модуля		
 		mkdir($css_folder);		//Создание папки для css модуля
 		
 		/* Запись комментария в css фаил модуля */		
@@ -44,7 +43,7 @@
 		mkdir($img_folder);
 		
 		/* Создание основного php фаила модуля */
-		$file_name = $modul_folder.'/'.$handle.'-'.'index'.'.php';
+		$file_name = $template_path.'/'.$handle.'-'.'index'.'.php';
 		
 		/* Запись контента в основной php фаил модуля */
 		file_put_contents($file_name, "<h1> Модуль $modul_name </h1><?", FILE_APPEND);
@@ -78,3 +77,21 @@ function modul_template_standard($handle, $template_path, $lpm){
 		?></div><!--.wrap--><?	
 			
 	}//end function
+	
+	
+	
+	
+	function modul_template_standard_bs($handle, $template_path, $lpm){
+		
+	
+			
+	}//end function
+	
+	
+	
+	
+	
+	
+	
+	
+	

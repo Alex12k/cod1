@@ -27,22 +27,43 @@ function check_project_page($modules_page){
 /* Функция проверяет существуют ли системные папки и если нет то просит worker создать их */
 function creat_system_elements($system_elements){	
 	
-	foreach($system_elements as $name => $src){	
-			
-		if(!isset(pathinfo($src)['extension']) && !is_dir($src)) {	
+	//print_arr($system_elements, 'Элементы которые требуются для работы omw');
+	
+	foreach($system_elements as $name => $src){		
+		
+
+		/* Создание папок */	
+		if(!isset(pathinfo($src)['extension']) && !is_dir($src) && $name !='loader') {	
 			
 			te($src);	
-			te('вызываю worker и даю задание создать фаил $name');
+			te('вызываю worker и даю задание создать папку $name');
 			worker('creat_folder', $src);					
 		}//end if
 		
-		if(isset(pathinfo($src)['extension']) && !is_file($src)){
+		/* Создание фаилов */
+		if(isset(pathinfo($src)['extension']) && !is_file($src) && $name !='loader'){
 
-			te("вызываю worker и даю задание создать фаил $file");
+			te("вызываю worker и даю задание создать фаил $name");
 			worker('creat_file', $src);					
 		}//end if	
-	}// end foreach	
+	}// end foreach
 	
+	/* Закачка из банка */
+
+	if($name == 'loader' && !is_file($src)){
+		
+		
+		te("вызываю worker и даю задание скачать фаил $name");	
+		worker('find_and_get_from_bank', 
+					array(
+						'findFolder'	=>	__loaderBankLocation__,
+						'filename' 		=>	LastPartUrl($src), 
+						'newLocation'	=>	PathParentFolder($src),				
+						)						
+						);
+	}
+	
+
 }//end function
 
 
@@ -63,14 +84,22 @@ function system_config($current_state_structure=''){
 	//define("__min_js_file__",				__min_folder__ .'/script_super.min.js');	
 	//define("__fjq__", 						__min_folder__ .'/fjq.js'		);	
 	define("__class_jsmin_path__",			$theme_path.'/omw/jsmin.php'		);	
-	define("__root_style__",				$protocol.$domen.'/wp-content/themes/root/css/style.min.css');	
+	define("__themes_css__",				get_stylesheet_uri() 				);	
 	define("__css_stack_folder__",			$theme_path.'/css_stack'			);	
 	define("__js_stack_folder__",			$theme_path.'/js_stack'	);	
 	define("__last_state_structure_file__",	$theme_path.'/omw/observer/last_state_structure.txt'		);	
 	define("__loader_data_file__",			$theme_path.'/load.txt'				);
-	define("__loader__",					$theme_path.'/deps_loader.php'			);
-	define("__modules_page_folder_name__",	'modules_page_folder'		);
+	define("__loader__",					$theme_path.'/deps_loader.php'		);
+	define("__loaderBankLocation__", 		'bank/php/scripts'					);
+	define("__modules_page_folder_name__",	'modules_page_folder'				);
 	define("__modules_page_folder__",		$theme_path.'/'.__modules_page_folder_name__);
+	
+	/* Определение названия и путей до папки с опциональными стилями и скриптами */
+	define("__options_stack_name__",		'frameworks'									);
+	define("__css_stack_frameworks__",		__css_stack_folder__ .'/'.__options_stack_name__);
+	define("__js_stack_frameworks__",		__js_stack_folder__	.'/'.__options_stack_name__	);
+	
+
 	
 	
 	$array = array(	
@@ -80,6 +109,9 @@ function system_config($current_state_structure=''){
 					'css_stack_folder'			=>	__css_stack_folder__			,/*Расположение папки css_stack */
 					'js_stack_folder'			=>	__js_stack_folder__				,/*Расположение папки js_stack */
 					'modules_page_folder'		=>	__modules_page_folder__			,/*Расположение папки modules_page_folder*/
+					'css_frameworks'			=>	__css_stack_frameworks__,
+					'js_frameworks'				=>	__js_stack_frameworks__,
+					
 					
 					
 					/* Фаилы */
@@ -93,23 +125,30 @@ function system_config($current_state_structure=''){
 				
 				),//end array 
 
-				'themes' => array('root_style'	=> __root_style__),
+				'themes' => array('themes_css'	=> __themes_css__),
 					
 			);//end array				
 		//print_arr($array);
 	
+
 	re_save($array);
 	return $new_array = array_merge($current_state_structure, $array);	
 	
 }//end function
 
 
+	
+
 
 function add_project_item_data_v4($modules_page=''){
 	
 	/* Если константа с путём до папки модулей установлена и не пуста */
+	//print_arr($modules_page);
+	
 	
 	if(defined('__modules_page_folder__'))	{			
+		if(!isset($modules_page)){ $modules_page = []; }
+		//$modules_page = [];
 		foreach($modules_page as $key => $value){		
 			// Удаляем старое значение и записываем новое 
 			unset(	$modules_page[$key]	);	
@@ -117,6 +156,7 @@ function add_project_item_data_v4($modules_page=''){
 		}
 	}
 	
+	//print_arr($modules_page);
 			
 	
 	$theme_path = get_stylesheet_directory();
@@ -158,7 +198,7 @@ function add_project_item_data_v4($modules_page=''){
 		$all_folders[$folder] = get_dirs( $theme_path.'/'.$folder, 'fold','', 'simple_array');	
 	}
 	
-	//print_arr($all_folders);
+	//print_arr($all_folders ,'all_folders');
 	$array['all_folders'] = $all_folders;
 	
 	//print_arr($array);			
@@ -167,7 +207,7 @@ function add_project_item_data_v4($modules_page=''){
 }
 
 
-
+	
 		
 
 function add_hash($current_state_structure, $modules_page){			
@@ -177,7 +217,7 @@ function add_hash($current_state_structure, $modules_page){
 	/* Вычисляем Hash сумму массива  */
 	$hash =  md5(serialize($array_for_hash)); 		
 	/* Записываем hash сумму в общий массив current */
-	$current_state_structure['hash'] = $hash; 			
+	$current_state_structure['hash'] = $hash;
 	return $current_state_structure;
 }
 
@@ -785,12 +825,6 @@ function last_mod_v3 ($Files_url, $mod=''){
 /*---------------------------------------------------------
 *	Сбор, запись и просмотр данных о CSS/JS фаилах
 *----------------------------------------------------------*/
-	
-
-
-
-
-
 
 
 

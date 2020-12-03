@@ -7,7 +7,6 @@
 */
 
 
-
 /*
 * 1. Функция вывода массива в читабельной форме
 */	
@@ -30,15 +29,15 @@ function print_arr($arr, $title_arr = ''){
 	
 		?><style>
 	
-		.print_arr		{ margin-bottom: 20px;}
-		.print_arr p	{margin: 10px 15px 5px;}
-		.print_arr pre	{font-size:16px; margin: 0px 15px 30px;}
+		.print_arr		{margin-bottom: 20px; color: black;}
+		.print_arr p	{margin: 10px 15px 5px; color: black;}
+		.print_arr pre	{font-size:16px; margin: 0px 15px 30px; color: black;}
 	
 		</style><?
 	
-	//	}//end if IP
+		}//end if IP
 	
-	}
+	//}
 	
 	
 /*

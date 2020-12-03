@@ -1,0 +1,206 @@
+
+/* ОБРАЩЕНИЕ К ЛЮБЫМ ЭЛЕМЕНТАМ НУЖНО ПРОВОДИТЬ ЧЕРЕЗ  */
+
+ .wrap-slaid-ofer{
+	background-image: url(/wp-content/themes/root_child/img/intro/intro-4-no-logo.jpg);
+}
+
+.wrap-slaid-ofer {padding-top: 100px;}
+
+
+/* Контейнер с offer */
+
+ .wrap-slaid-ofer .intro-text  {display: inline-block; vertical-align: top;}
+  h2 {margin-bottom: 7px;}
+ .intro-text h1{font-size: 30px;}
+ .form  h2 {margin-top: 4px; padding-top: 17px;}
+
+
+/* Телефон */
+ .wrapper-text-1 .tel a {color: #fe6523;}
+
+
+
+
+/* Форма Заявки */
+
+ .wrap-slaid-ofer .form {background: #ffffffcf; max-width: 425px;}
+
+ .form input:not([type="submit"]), .wpcf7-form-control:not([type="submit"]), textarea {
+   border: 1px solid #7d9db3; font: inherit; color: #000000; font-weight: 500;}
+   
+ .form p {color: #25364b; font-family: inherit; font-weight: bold;}
+   
+ .form-1 {
+	display: inline-block; text-align: center;
+	padding-top: 10px;
+    margin-top: 10px;
+}
+
+ .form, .pum-content { padding: 16px 25px 25px;}
+
+
+
+@media (max-width: 600px) {
+
+	
+	/* Убираем строку "Освободите место для нового!" */
+	 .wrap-slaid-ofer .intro-text h2 {display: none;}
+
+
+	/* Корректировка размеров шрифтов в блоке offer */
+	 .wrapper-text-1 h3 {font-size: 17px;}
+	 .wrapper-text-1 h3 span {font-size: 18px;}
+	 .wrap-slaid-ofer li {font-size: 11px;}
+	 .wrapper-text h3 {font-size: 14px;}
+	 .wrapper-text h3 span { font-size: 15px;}
+	 .intro-text h1{font-size: 24px; line-height: 25px;}
+	
+	
+
+	/* Корректировка отступов margin в блоке offer */
+	 .wrapper-text h3 {margin: 20px 0 10px; font-size: 21px;}
+     .wrapper-text-1 h3 {margin: 23px 0 12px;}
+     .wrap-slaid-ofer h2 {margin-bottom: 15px;}
+
+
+	/* Корректировка отступов padding в блоке offer */
+	 .wrap-slaid-ofer .intro-text {padding-top: 0px; margin-bottom: 0px;}
+
+
+	/* Медиа Запросы Хедер */
+	.site-title, .site-title a {font-size: 17px;}
+    .site-logotype img {max-width: 41px;}
+    .site-branding {padding: 5px 41px 5px 41px;}
+    /*.site-logotype {max-width: 10px;} */
+	.site-title, .site-title a {line-height: unset;}
+	
+	
+		/* Корректировка Блока с телефоном */
+	 .wrapper-text-1 .tel {font-size: 21px;}
+	 .wrapper-text-1 .tel a {font-size: 21px; color: #fe6523; line-height: 27px;}
+	
+	/* Выбеливание фона */
+	 .black-1-slaid-ofer, .black-3-our-company {background: #ffffff80;}
+	
+	
+	/*Форма*/
+	
+	
+}
+
+	/* Корректировка для айпада */ 
+
+	@media (max-width: 768px){ 
+	
+	
+	 .wrap-slaid-ofer h2 {margin-bottom: 5px;	margin-top: 0px;	padding-top: 5px}
+	 .form-1 { display: block; text-align: center;}
+
+}
+	/* Корректировка для айпадаpro */ 
+	@media (max-width: 1024px){ 
+	
+	/* Убираем глобальный отступ сверху */
+	 .wrap-slaid-ofer {padding-top: 0px;}
+	
+	 .form-1 { display: block; text-align: center; margin-top: -15px;}
+
+}
+
+
+ .site-title,  .site-title a {line-height: unset;}
+
+
+/* Центрируем кнопку ОТПРАВИТЬ */ 
+ .wpcf7 .ajax-loader { width: 0px; padding: 0; margin: 0 0 0 0px;}
+
+
+/* Для узких мобильных экранов */
+@media (max-width: 360px){ 
+	 .wrapper-text-1 .tel a {display: block;}
+	 .wrapper-text h3 {font-size: 20px;}
+ }
+
+
+		
+		
+/* НОВАЯ МОБИЛЬНАЯ ВЕРСИЯ */
+
+/*	#6	Блок с телефоном общий	*/ 	
+
+/*	#4	Главный офер*/ 
+
+@media (max-width: 420px) {
+
+.wrap-slaid-ofer {
+    min-height: unset;
+}
+
+ .site-branding {
+    padding: 2px 41px 2px 41px;
+}
+
+/* black */
+ .black-1-slaid-ofer, .black-3-our-company {
+    background: white;
+}
+
+	
+ .wrap-slaid-ofer .intro-text h1{display: none;}		
+
+/* Список плюсов */
+ .wrap-slaid-ofer ul.plus {margin-bottom: 5px; margin-top: 5px;}
+	
+/* Слово телефон */	
+ .wrapper-text-1 h3 span {font-size: 21px; color: #005691; display: none;	}
+
+/* Весь блок с телефоном */
+ .wrapper-text-1 h3 {margin: 5px 0 5px; text-align: center;}
+
+ .wrapper-text-1 .tel a {font-size: 32px; }
+
+
+
+/*	#8	Список приемуществ	*/ 	
+ .wrap-slaid-ofer ul.plus li{	
+	font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* Сколько заплатим */
+ .wrapper-text h3 {
+    margin: 5px 0 5px;
+
+}
+
+/* Отступы от рамок формы */
+ .wrap-slaid-ofer .form {padding-top: 5px;padding-bottom: 5px; border: none;}
+ .wrap-slaid-ofer .form input {margin: 2px 0;}
+ .wrap-slaid-ofer .form input[type = "submit"] {margin-top: 5px;}
+
+
+}/*END MEDIA 420 px */	
+
+
+@media (max-width: 360px) {
+	.wrapper-text-1 .tel a {font-size: 26px; }
+	
+	 .wrap-slaid-ofer ul.plus li{	
+	font-size: 13px;
+    font-weight: bold; 
+}
+
+
+.wrapper-text h3 {font-size: 13px;}
+.form-1 {margin-top: -25px;}
+.form p {line-height: 15px;}
+	
+}	
+
+
+
+	
+		
+		

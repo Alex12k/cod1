@@ -720,6 +720,17 @@ function custom_pre_get_posts_query( $q )	{
 
 
 
+/* Функция получает terms продукта в отсортированном виде */
+function get_orderby_product_cat(){
+	
+	global $post;
+	$terms = wp_get_object_terms(
+			$post->ID, 
+			'product_cat', 
+			array('orderby' => 'term_id', 'order' => 'ASC') ); 
+			
+	return $terms; 		
+}
 
 
 

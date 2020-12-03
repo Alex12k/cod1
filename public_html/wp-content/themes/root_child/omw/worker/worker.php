@@ -33,7 +33,7 @@ function worker($command, $data=''){
 	
 	
 	/* -------------------------------------------------*/
-	/*	Создать фаил									*/
+	/*	Создать фаил										*/
 	/* -------------------------------------------------*/
 	if($command == 'creat_file'){
 		$file_neme = basename($data);		
@@ -42,33 +42,64 @@ function worker($command, $data=''){
 		file_put_contents($data, '');	
 	}
 
-	
-	if($command == 'get_css_file_from_bank'){
-				
-			$file 			= 	$data['filename'];
-			$type 			=	$data['type'];
+	/* -------------------------------------------------*/
+	/*	Получение фаила из банка										*/
+	/* -------------------------------------------------*/
+	if($command == 'get_file_from_bank'){
 			
+			te("Worker принял задание перенести в проект фаил $file.$type");
+			print_arr($data, 'data для get_file_from_bank');	
 			
-			te("Worker принял задание перенести в проект фаил $file.$type");	
+			$ftp = new myFtp( ftp_config('main') );	
+		
 					
-			//print_arr($data);
+			$file 			= 	$data['filename'];	te($file, 'file');
+			$type 			=	$data['type'];		te($type, 'type');
 			
-			/* Адрес до фаила с кодом в банке */
-			$target_file		 	= 'bank/'.$type.'_frameworks/'.$data['filename'].'.'.$data['type'];		
-			//te($target_file);
 			
-			/* в какую папку записать фаил */
-			$project_folder 		= get_stylesheet_directory().'/'.$type.'_stack/frameworks';
-			//te($project_folder);
 			
-			/* Под каким именем записать фаил */
-			$file_name 				= $file.'.'.$type;
-			//te($file_name, 'под каким имененм записать фаил');
-						
-			get_from_bank($target_file, $project_folder, $file_name);
+			$findFolder 	= 	'bank/'.$type.'_frameworks/';
+			$filename   	=	$file.'.'.$type;
+			if($type == 'css')	{$newLocation	=	__css_stack_frameworks__;}
+			if($type == 'js')	{$newLocation	=	__js_stack_frameworks__;}
+			
+			
+			/* Вызываем метод findAndDownload	*/	
+			$ftp->findAndDownloadFile($findFolder, $filename, $newLocation);
+		
+			print_arr($ftp->getLog(), 'log');
+			
+			
+			
+		
 	
 	}
 
+
+	/* -------------------------------------------------*/
+	/*	Получение фаила из банка										*/
+	/* -------------------------------------------------*/
+	if($command == 'find_and_get_from_bank'){
+				
+		
+		print_arr($data, 'data для get_file_from_bank');
+		
+		$ftp = new myFtp( ftp_config('main') );
+				
+		/* Где ищем */				$findFolder  = $data['findFolder']; 			
+		/* Имя фаила который ищем*/ 	$filename    = $data['filename'];				
+		/* Куда будем копировать */		$newLocation = $data['newLocation'];	
+		
+		/* Вызываем метод findAndDownload	*/	
+		$ftp->findAndDownloadFile($findFolder, $filename, $newLocation);
+		
+		print_arr($ftp->getLog(), 'log');
+			
+			
+					
+		
+	
+	}
 
 	
 	
@@ -129,11 +160,17 @@ function worker($command, $data=''){
 		//print_arr($contents, 'min_контент');	
 		//print_arr($data['path'], 'путь к min фаилам');
 			
+			
+		
 		/*Записываем контент в мин фаил*/		
 		foreach($data['path'] as $page_name => $min_path){
-				
-				//print_arr($min_path);
-				//print_arr($contents[$page_name]);
+		
+		//	echo '<hr>';
+		//		te($page_name, 'page NAME');	
+		//		print_arr($min_path);
+		//		print_arr($contents[$page_name]);
+		//	echo '<hr>';
+			
 			file_put_contents($min_path, $contents[$page_name]);	
 		}
 	
@@ -164,6 +201,7 @@ function worker($command, $data=''){
 		
 		require_once $data['class_jsmin_path'];
 		
+		
 		/* .= Добавляем данные со всех фаилов в переменную */
 		foreach($data['files'] as $key => $value){
 					
@@ -183,8 +221,12 @@ function worker($command, $data=''){
 		/*Записываем контент в мин фаил*/		
 		foreach($data['path'] as $page_name => $min_path){
 				
-				//print_arr($min_path);
-				//print_arr($contents[$page_name]);
+			//echo '<hr>';
+			//	te($page_name, 'page NAME');	
+			//	print_arr($min_path, 'min_path');
+			//	print_arr($contents[$page_name] , 'min_content');
+			//echo '<hr>';
+			
 			file_put_contents($min_path, $contents[$page_name]);	
 		}
 			
