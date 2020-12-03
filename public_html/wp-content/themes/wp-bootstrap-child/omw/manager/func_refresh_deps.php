@@ -234,13 +234,12 @@ function refreash_deps($type, $current_state_structure){
 		/* Если изменения в папках мудльных страниц
 		то перезаписываем min фаил конкретной страницы */
 			
-		if($where!='global_stack' && $where != 'options'){			
-			$min_path_file[basename($where)] = __min_folder__ .'/'.basename($where).'.min.css';		
-			$page_names[] = basename($where);
-		
+		if($where!='global_stack' && $where != 'options'){
+			$min_path_file[basename($where)] = __min_folder__ .'/'.basename($where).'.min.'.$type;		
+			$page_names[] = basename($where);	
 		}
 		
-		//print_arr($min_path_file, 'пути к мин фаилам требующим обновления min');
+		print_arr($min_path_file, 'пути к мин фаилам требующим обновления min');
 		//print_arr($page_names,'имена страниц');	
 		
 	
